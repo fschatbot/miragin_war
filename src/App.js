@@ -1,8 +1,14 @@
-import { Fragment } from "react";
+import { Fragment, Component } from "react";
+import { Toaster } from "react-hot-toast";
 
 class App extends Component {
+	state = {};
 	render() {
-		return <Fragment>Hello World</Fragment>;
+		return (
+			<Fragment>
+				<Toaster position="top-right" />
+			</Fragment>
+		);
 	}
 }
 
