@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.max-w-8xl {
+		max-width: 90rem;
+	}
+}
+
 @layer components {
 	/* App CSS */
+	.container {
+		@apply grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4 m-5
+		w-full max-w-8xl mx-auto;
+	}
+
+	.UnitContainer {
+		@apply shadow-md border-gray-500 border p-3 rounded-md
+		transition-all duration-500 ease-in-out
+		flex flex-col
+		overflow-auto;
+	}
 }
