@@ -14,7 +14,6 @@ class App extends Component {
 					Hide Unit Data
 				</button>
 				<this.UnitsRender ShowUnitData={this.state.ShowUnitData} />
-				Hello World
 				<Toaster position="top-right" />
 			</Fragment>
 		);
