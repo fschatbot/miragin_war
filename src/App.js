@@ -3,21 +3,27 @@ import { Toaster } from "react-hot-toast";
 import Units from "./UnitData/Data";
 
 class App extends Component {
-	state = {};
+	state = {
+		ShowUnitData: true,
+	};
 	render() {
 		// console.clear();
 		return (
 			<Fragment>
-				<this.UnitsRender />
+				<button className="UnitButton" onClick={this.toggleRender}>
+					Hide Unit Data
+				</button>
+				<this.UnitsRender ShowUnitData={this.state.ShowUnitData} />
+				Hello World
 				<Toaster position="top-right" />
 			</Fragment>
 		);
 	}
 
-	UnitsRender = () => {
+	UnitsRender = ({ ShowUnitData }) => {
 		/* {Object.entries(Units).map(([name, data]) => this.UnitRender(name, data))} */
 		return (
-			<div className="UnitsContainer">
+			<div className={"UnitsContainer is-" + (ShowUnitData ? "visible" : "hidden")}>
 				{Object.entries(Units).map((args) => this.UnitRender(...args))}
 			</div>
 		);
@@ -43,6 +49,15 @@ class App extends Component {
 				<label className="StatsText">Attack Speed: {data["Attack Speed"]}</label>
 			</div>
 		);
+	};
+
+	toggleRender = (e) => {
+		this.setState({ ShowUnitData: !this.state.ShowUnitData });
+		if (this.state.ShowUnitData) {
+			e.target.innerHTML = "Show Unit Data";
+		} else {
+			e.target.innerHTML = "Hide Unit Data";
+		}
 	};
 }
 
