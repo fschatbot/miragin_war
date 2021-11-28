@@ -16,4 +16,8 @@ RawData.slice(1).forEach((RawUnitData) => {
 	Units[RawUnitData[0]] = UnitData;
 });
 
+const MAX_INCOME = 8000;
+const MAX_UNIT = 60;
+
 export default Units;
+export { MAX_UNIT, MAX_INCOME };
