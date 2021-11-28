@@ -8,7 +8,7 @@ class App extends Component {
 		// console.clear();
 		return (
 			<Fragment>
-				<div className="container">
+				<div className="UnitsContainer">
 					{/* {Object.entries(Units).map(([name, data]) => this.UnitRender(name, data))} */}
 					{Object.entries(Units).map((args) => this.UnitRender(...args))}
 				</div>
@@ -20,7 +20,7 @@ class App extends Component {
 	UnitRender = (name, data) => {
 		// console.log(data);
 		return (
-			<div className="UnitContainer">
+			<div className="Unit">
 				<label className="UnitName">{name}</label>
 				<label>
 					Cost: {data.Cost} supply {data.Supply}
