@@ -8,14 +8,20 @@ class App extends Component {
 		// console.clear();
 		return (
 			<Fragment>
-				<div className="UnitsContainer">
-					{/* {Object.entries(Units).map(([name, data]) => this.UnitRender(name, data))} */}
-					{Object.entries(Units).map((args) => this.UnitRender(...args))}
-				</div>
+				<this.UnitsRender />
 				<Toaster position="top-right" />
 			</Fragment>
 		);
 	}
+
+	UnitsRender = () => {
+		/* {Object.entries(Units).map(([name, data]) => this.UnitRender(name, data))} */
+		return (
+			<div className="UnitsContainer">
+				{Object.entries(Units).map((args) => this.UnitRender(...args))}
+			</div>
+		);
+	};
 
 	UnitRender = (name, data) => {
 		// console.log(data);
