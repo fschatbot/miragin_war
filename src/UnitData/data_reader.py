@@ -20,7 +20,7 @@ data = [[
 
 
 for Unit, UnitData in raw_data.items():
-	UnitData["IsLight"] = UnitData["Armor Type"] == "LIGHT"
+	UnitData["IsLight"] = int(UnitData["Armor Type"] == "LIGHT")
 	del UnitData["Armor Type"]
 	data.append([Unit, *UnitData.values()])
 
