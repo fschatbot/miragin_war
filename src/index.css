@@ -37,3 +37,18 @@
 		@apply dark:bg-gray-600;
 	}
 }
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background: #b3afb3;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #b3afb3;
+}
+::-webkit-scrollbar-track {
+	background: #f0f0f0;
+}
